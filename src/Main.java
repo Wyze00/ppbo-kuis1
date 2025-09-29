@@ -49,7 +49,7 @@ public class Main {
             System.out.print("Masukan radius : ");
             double radius = Util.inputDouble();
 
-            all3D.add(new Sphere(radius));
+            all3D.add(createInstance(radius, Shape.Sphere));
 
         } else if(pilihan == 2){
 
@@ -58,7 +58,7 @@ public class Main {
             System.out.print("Masukan Height : ");
             double height = Util.inputDouble();
 
-            all3D.add(new Cylinder(radius, height));
+            all3D.add(createInstance(radius, height));
 
         } else if(pilihan == 3){
 
@@ -69,14 +69,14 @@ public class Main {
             System.out.print("Masukan Length : ");
             double length = Util.inputDouble();
 
-            all3D.add(new Cuboid(width, height, length));
+            all3D.add(createInstance(width, height, length));
 
         } else if(pilihan == 4){
 
             System.out.print("Masukan Sisi : ");
             double side = Util.inputDouble();
 
-            all3D.add(new Cube(side));
+            all3D.add(createInstance(side, Shape.Cube));
         }
     }
 
@@ -88,5 +88,22 @@ public class Main {
 
         System.out.print("Enter to continue..");
         Util.next();
+    }
+
+    public static Object3D createInstance(double width, double height, double length){
+        return new Cuboid(width, height, length);
+    }
+
+    public static Object3D createInstance(double sideOrradius, Shape shapeName){
+
+        if(shapeName == Shape.Cube){
+            return new Cube(sideOrradius);
+        }
+
+        return new Sphere(sideOrradius);
+    }
+
+    public static Object3D createInstance(double radius, double height){
+        return new Cylinder(radius, height);
     }
 }

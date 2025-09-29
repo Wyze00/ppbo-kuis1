@@ -69,11 +69,6 @@ class Cylinder extends Object3D {
         this.height = height;
     }
 
-    public Cylinder(double radius) {
-        super(Shape.Cylinder);
-        this.radius = radius;
-    }
-
     @Override
     public double getVolume() {
         return this.height * Object3D.PI * Math.pow(this.radius, 2);
@@ -112,17 +107,6 @@ class Cuboid extends Object3D {
         this.width = width;
         this.height = height;
         this.length = length;
-    }
-
-    public Cuboid(double width, double height) {
-        super(Shape.Cuboid);
-        this.width = width;
-        this.height = height;
-    }
-
-    public Cuboid(double width) {
-        super(Shape.Cuboid);
-        this.width = width;
     }
 
     @Override
