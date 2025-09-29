@@ -1,0 +1,15 @@
+Sphere
+  area = 4 · π · r2
+  volume = (4/3) · π · r3
+
+Cylinder
+  volume = π · r2 · h
+  area = 2 · π · r · (r + h)
+
+Cuboid
+  volume = L × B × H
+  area = 2(lw + lh + wh)
+
+Cube
+  volume = s x s x s
+  area = 4 x s
