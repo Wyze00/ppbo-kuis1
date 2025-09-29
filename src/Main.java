@@ -24,6 +24,8 @@ public class Main {
             objectMenu();
         } else if(pilihan == 2){
             printAll();
+        } else {
+            return;
         }
 
         mainMenu();
@@ -84,6 +86,7 @@ public class Main {
             o.print();
         }
 
+        System.out.print("Enter to continue..");
         Util.next();
     }
 }

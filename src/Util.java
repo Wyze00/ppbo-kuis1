@@ -14,5 +14,6 @@ public class Util {
 
     static void next(){
         scan.nextLine();
+        scan.nextLine();
     }
 }
