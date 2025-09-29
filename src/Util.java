@@ -13,7 +13,6 @@ public class Util {
     }
 
     static void next(){
-        scan.next();
+        scan.nextLine();
     }
-
 }

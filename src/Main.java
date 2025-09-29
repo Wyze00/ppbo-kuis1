@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Scanner;
+
 public class Main {
 
     static ArrayList<Object3D> all3D = new ArrayList<>();
@@ -33,10 +33,10 @@ public class Main {
 
         StringBuilder menu = new StringBuilder();
         menu.append("Pilih Object : \n")
-                .append("1. Sphere\n")
-                .append("2. Cylinder\n")
-                .append("3. Cuboid\n")
-                .append("3. Cube\n");
+            .append("1. Sphere\n")
+            .append("2. Cylinder\n")
+            .append("3. Cuboid\n")
+            .append("4. Cube\n");
 
         System.out.println(menu.toString());
         int pilihan = Util.inputInt();
@@ -46,6 +46,7 @@ public class Main {
 
             System.out.print("Masukan radius : ");
             double radius = Util.inputDouble();
+
             all3D.add(new Sphere(radius));
 
         } else if(pilihan == 2){

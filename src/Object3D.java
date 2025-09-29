@@ -114,6 +114,17 @@ class Cuboid extends Object3D {
         this.length = length;
     }
 
+    public Cuboid(double width, double height) {
+        super(Shape.Cuboid);
+        this.width = width;
+        this.height = height;
+    }
+
+    public Cuboid(double width) {
+        super(Shape.Cuboid);
+        this.width = width;
+    }
+
     @Override
     public double getVolume() {
         return this.width * this.height * this.length;
